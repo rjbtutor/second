@@ -1,16 +1,16 @@
-name: deploy-container
+name: gallery-deployment
 
 on:
   push:
     branches:
       - main
     paths:
-      - 'apps/gallery/**'
+      - 'gallery/**'
       - '.github/workflows/**'
 
 defaults:
   run:
-    working-directory: apps/gallery
+    working-directory: gallery
 
 jobs:
   build:

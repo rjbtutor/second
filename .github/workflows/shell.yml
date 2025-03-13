@@ -1,16 +1,16 @@
-name: deploy-container
+name: shell-deployment
 
 on:
   push:
     branches:
       - main
     paths:
-      - 'apps/shell/**'
+      - 'shell/**'
       - '.github/workflows/**'
 
 defaults:
   run:
-    working-directory: apps/shell
+    working-directory: shell
 
 jobs:
   build:
