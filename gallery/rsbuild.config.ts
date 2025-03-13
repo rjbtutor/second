@@ -2,6 +2,8 @@ import { defineConfig } from '@rsbuild/core';
 import { pluginReact } from '@rsbuild/plugin-react';
 import { pluginModuleFederation } from '@module-federation/rsbuild-plugin';
 
+const isDev = process.env.NODE_ENV === 'development';
+
 export default defineConfig({
   plugins: [
     pluginReact(),
@@ -15,5 +17,6 @@ export default defineConfig({
   ],
   server: {
     port: 3000,
+    base: isDev ? '/' : '/gallery/latest/',
   },
 });
