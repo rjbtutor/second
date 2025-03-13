@@ -3,7 +3,6 @@ import { pluginReact } from '@rsbuild/plugin-react';
 import { pluginModuleFederation } from '@module-federation/rsbuild-plugin';
 
 const isDev = process.env.NODE_ENV === 'development';
-const domain = process.env.PRODUCTION_DOMAIN;
 
 export default defineConfig({
   plugins: [
@@ -13,7 +12,7 @@ export default defineConfig({
       remotes: {
         gallery: isDev
           ? 'gallery@http://localhost:3000/mf-manifest.json'
-          : `gallery@https://rjbtutor-second.s3.eu-west-2.amazonaws.com/gallery/latest/mf-manifest.json`,
+          : `gallery@/gallery/latest/mf-manifest.json`,
       },
       shared: ['react', 'react-dom'],
     }),
