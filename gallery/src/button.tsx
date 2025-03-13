@@ -5,7 +5,7 @@ export default function Button() {
     !!process.versions.node;
   let dom = 'unknown domain';
   if (true) {
-    dom = `${process.env.NODE_ENV}`;
+    dom = `${process.env.PRODUCTION_DOMAIN}`;
   }
 
   return <div style={{ background: 'red' }}>Domain=[{dom}]</div>;
