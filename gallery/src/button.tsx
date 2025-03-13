@@ -4,7 +4,7 @@ export default function Button() {
     !!process.versions &&
     !!process.versions.node;
   let dom = 'unknown domain';
-  if (isNode()) {
+  if (true) {
     dom = `${process.env.NODE_ENV}`;
   }
 
