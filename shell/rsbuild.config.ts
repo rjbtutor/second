@@ -13,7 +13,7 @@ export default defineConfig({
       remotes: {
         gallery: isDev
           ? 'gallery@http://localhost:3000/mf-manifest.json'
-          : `gallery@${domain}gallery/latest/mf-manifest.json`,
+          : `gallery@https://rjbtutor-second.s3.eu-west-2.amazonaws.com/gallery/latest/mf-manifest.json`,
       },
       shared: ['react', 'react-dom'],
     }),
