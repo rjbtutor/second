@@ -1,11 +1,11 @@
 export default function Button() {
   const isNode = () =>
-    typeof process !== 'undefined' &&
-    !!process.versions &&
-    !!process.versions.node;
+    // typeof process !== 'undefined' &&
+    // !!process.versions &&
+    // !!process.versions.node;
   let dom = 'unknown domain';
   if (true) {
-    dom = `${process.env.PRODUCTION_DOMAIN}`;
+    dom = `${import.meta.env.PRODUCTION_DOMAIN}`;
   }
 
   return <div style={{ background: 'red' }}>Domain=[{dom}]</div>;
